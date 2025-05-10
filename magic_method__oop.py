@@ -38,6 +38,7 @@ class CustomDict:
             raise AttributeError("Нельзя удалить dangerous_attr")
         else:
             print(f'[ATTR DEL] {item}')
+            super().__delattr__(item)
 
 d = CustomDict()
 d['a'] = 42
